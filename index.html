@@ -2,132 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Expresate un po´</title>
+  <title>Expresate un po</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    header { background: #222; color: white; padding: 20px; text-align: center; }
+    header { background: #222; color: white; padding: 30px; text-align: center; }
     header h1 { margin: 0; font-size: 2.5em; }
     nav { background: #444; display: flex; justify-content: center; }
     nav a { color: white; padding: 15px 20px; text-decoration: none; display: block; }
     nav a:hover { background: #666; }
-    section { padding: 40px; max-width: 900px; margin: auto; display: none; }
-    section.active { display: block; }
-    .post, .album { background: white; padding: 20px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); cursor: pointer; }
+    section { padding: 40px; max-width: 900px; margin: auto; }
     footer { background: #222; color: white; padding: 20px; text-align: center; }
   </style>
 </head>
 <body>
-  <!-- Menú principal -->
   <header>
     <h1>Expresate un po</h1>
-    <p><em>“Vayamos a la guerra con amor, y la paz seguirá.”</em></p>
-    <p>Hola, soy Bruno. Escribo relatos y versos del día a día, compartiendo lo que pienso y siento. </p>
+    <p><em>“Un pensamiento al día mantiene viva la voz interior.”</em></p>
+    <p>Hola, soy Bruno. Escribo reflexiones, relatos y versos del día a día, compartiendo lo que pienso y siento.</p>
   </header>
 
   <nav>
-    <a href="#" onclick="showSection('escritos')">Escritos</a>
-    <a href="#" onclick="showSection('galeria')">Galería de fotos</a>
-    <a href="#" onclick="showSection('publicaciones')">Publicaciones</a>
+    <a href="escritos/index.html">Escritos</a>
+    <a href="galeria/index.html">Galería de fotos</a>
+    <a href="publicaciones/index.html">Publicaciones</a>
   </nav>
 
-  <!-- Escritos -->
-  <section id="escritos" class="active">
-    <h2>Escritos ✍️</h2>
-    <div class="post" onclick="showPost('post1')">
-      <h3>27 de agosto 2025 – Epístola de Francisco</h3>
-      <p>Hoy algo tibio se atrevió a posarse sobre mí. No anunció su llegada, no golpeó la puerta ni solicitó franquicia. 
-        Irrumpió como un forastero que, en vez de hurtar, abandona monedas sobre la mesa. No era exactamente luz, pero 
-        tenía la morfología de un resplandor que parecía conocerse culpable; se dejaba rozar, aunque era evidente que no 
-        podía sostenerse por mucho tiempo. Y yo, en lugar de aproximarme, retrocedí. No fue por espanto a lo que era, 
-        sino por el recelo a lo que, después, indefectiblemente me expoliaría.
-Desde muy atrás en mi vida, quizá desde aquellas tardes en que la voz de mi madre se fracturaba en mitad de una canción,
-        aprendí a no beber del cáliz colmado. A dejarlo inmóvil, a esperar a que el agua se amotine sola. Así me ejercité,
-        con la disciplina de quien sabe que no debe besar lo que está vivo para no tener que amortajarlo después.
-Me exhortan a franquear las ventanas, pero mis manos se aferran al cerrojo con la obstinación de un condenado que protege
-        su única certeza. Sé que la claridad es una fiera ávida: si la nutres, retorna por más, y la segunda vez no 
-        suplica, desgarra.
-Tal vez mi único privilegio sea este: la potestad de desdeñar lo que todos anhelan. No por altivez ni por displicencia,
-        sino porque he comprendido que cada latido jubiloso llega con su féretro en miniatura, listo, con el nombre cincelado.
-        Por eso respiro a medias, como si cada inhalación plena fuese un convenio tácito con la pérdida. Y escribo, en cambio,
-        sobre esa ausencia que otros no toleran mirar, como si mi ministerio fuera custodiarla.
-Lo que aquí te lego no pretende adoctrinarte ni descifrarte nada. Es apenas un vestigio, una impronta tibia sobre la mesa
-        después de que alguien se ha retirado. Si algún día la identificas, acaso sea porque has sentido el mismo roce 
-        en el hombro… y, como yo, te has replegado antes de que el aire se entumeciera. Si ello acontece, no habrá 
-        menester de que me lo declares: intuiré que hemos rubricado el mismo pacto, cada cual con su penumbra propia, 
-        sin fedatarios… salvo ella.
-Francisco....</p>
-    </div>
-    <div class="post" onclick="showPost('post2')">
-      <h3>26 de agosto 2025 – Reflexión</h3>
-      <p>Segundo escrito de prueba...</p>
-    </div>
-    <!-- Aquí vas agregando más -->
-    
-    <!-- Detalle del escrito -->
-    <div id="post1" class="post" style="display:none;">
-      <h3>27 de agosto 2025 – El inicio</h3>
-      <p>Este es el texto completo del primer escrito...</p>
-    </div>
-    <div id="post2" class="post" style="display:none;">
-      <h3>26 de agosto 2025 – Reflexión</h3>
-      <p>Este es el texto completo del segundo escrito...</p>
-    </div>
+  <section>
+    <h2>Bienvenido</h2>
+    <p>Este es mi espacio personal donde comparto mis escritos, recuerdos en fotos y noticias de mis publicaciones.</p>
   </section>
 
-  <!-- Galería -->
-  <section id="galeria">
-    <h2>Galería de fotos 📸</h2>
-    <div class="album" onclick="showAlbum('album1')">
-      <h3>Viaje a la montaña</h3>
-    </div>
-    <div class="album" onclick="showAlbum('album2')">
-      <h3>Recuerdos de infancia</h3>
-    </div>
-
-    <!-- Álbumes -->
-    <div id="album1" class="album" style="display:none;">
-      <h3>Viaje a la montaña</h3>
-      <img src="https://via.placeholder.com/200" alt="foto1">
-      <img src="https://via.placeholder.com/200" alt="foto2">
-    </div>
-    <div id="album2" class="album" style="display:none;">
-      <h3>Recuerdos de infancia</h3>
-      <img src="https://via.placeholder.com/200" alt="foto3">
-    </div>
-  </section>
-
-  <!-- Publicaciones -->
-  <section id="publicaciones">
-    <h2>Publicaciones 📚</h2>
-    <p>Mi primer poemario estará disponible próximamente.  
-    Aquí compartiré avances, portada y fecha de lanzamiento.</p>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>Contacto: +51 999 999 999 | Redes: @bruno_escribe</p>
+    <p>📞 Contacto: +51 999 999 999 | Redes: @bruno_escribe</p>
   </footer>
-
-  <!-- Script para cambiar secciones -->
-  <script>
-    function showSection(id) {
-      document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-    }
-    function showPost(id) {
-      document.querySelectorAll("#escritos .post").forEach(p => p.style.display = "block");
-      document.querySelectorAll("#escritos .post").forEach(p => {
-        if (p.id && p.id !== id) p.style.display = "none";
-      });
-      document.getElementById(id).style.display = "block";
-    }
-    function showAlbum(id) {
-      document.querySelectorAll("#galeria .album").forEach(a => a.style.display = "block");
-      document.querySelectorAll("#galeria .album").forEach(a => {
-        if (a.id && a.id !== id) a.style.display = "none";
-      });
-      document.getElementById(id).style.display = "block";
-    }
-  </script>
 </body>
 </html>
