@@ -2,20 +2,112 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mis escritos diarios</title>
+  <title>Expresate un po</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f9; margin: 40px; line-height: 1.6; }
-    h1 { color: #333; }
-    .post { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+    header { background: #222; color: white; padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    nav { background: #444; display: flex; justify-content: center; }
+    nav a { color: white; padding: 15px 20px; text-decoration: none; display: block; }
+    nav a:hover { background: #666; }
+    section { padding: 40px; max-width: 900px; margin: auto; display: none; }
+    section.active { display: block; }
+    .post, .album { background: white; padding: 20px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); cursor: pointer; }
+    footer { background: #222; color: white; padding: 20px; text-align: center; }
   </style>
 </head>
 <body>
-  <h1>📖 Mis escritos diarios</h1>
-  
-  <div class="post">
-    <h2>27 de agosto 2025</h2>
-    <p>Hoy comienzo este espacio para compartir mis pensamientos, reflexiones y escritos del día a día.</p>
-  </div>
-  
+  <!-- Menú principal -->
+  <header>
+    <h1>Expresate un po</h1>
+    <p><em>“Un pensamiento al día mantiene viva la voz interior.”</em></p>
+    <p>Hola, soy Bruno. Escribo reflexiones, relatos y versos del día a día, compartiendo lo que pienso y siento.</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('escritos')">Escritos</a>
+    <a href="#" onclick="showSection('galeria')">Galería de fotos</a>
+    <a href="#" onclick="showSection('publicaciones')">Publicaciones</a>
+  </nav>
+
+  <!-- Escritos -->
+  <section id="escritos" class="active">
+    <h2>Escritos ✍️</h2>
+    <div class="post" onclick="showPost('post1')">
+      <h3>27 de agosto 2025 – El inicio</h3>
+      <p>Primer escrito de prueba...</p>
+    </div>
+    <div class="post" onclick="showPost('post2')">
+      <h3>26 de agosto 2025 – Reflexión</h3>
+      <p>Segundo escrito de prueba...</p>
+    </div>
+    <!-- Aquí vas agregando más -->
+    
+    <!-- Detalle del escrito -->
+    <div id="post1" class="post" style="display:none;">
+      <h3>27 de agosto 2025 – El inicio</h3>
+      <p>Este es el texto completo del primer escrito...</p>
+    </div>
+    <div id="post2" class="post" style="display:none;">
+      <h3>26 de agosto 2025 – Reflexión</h3>
+      <p>Este es el texto completo del segundo escrito...</p>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section id="galeria">
+    <h2>Galería de fotos 📸</h2>
+    <div class="album" onclick="showAlbum('album1')">
+      <h3>Viaje a la montaña</h3>
+    </div>
+    <div class="album" onclick="showAlbum('album2')">
+      <h3>Recuerdos de infancia</h3>
+    </div>
+
+    <!-- Álbumes -->
+    <div id="album1" class="album" style="display:none;">
+      <h3>Viaje a la montaña</h3>
+      <img src="https://via.placeholder.com/200" alt="foto1">
+      <img src="https://via.placeholder.com/200" alt="foto2">
+    </div>
+    <div id="album2" class="album" style="display:none;">
+      <h3>Recuerdos de infancia</h3>
+      <img src="https://via.placeholder.com/200" alt="foto3">
+    </div>
+  </section>
+
+  <!-- Publicaciones -->
+  <section id="publicaciones">
+    <h2>Publicaciones 📚</h2>
+    <p>Mi primer poemario estará disponible próximamente.  
+    Aquí compartiré avances, portada y fecha de lanzamiento.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contacto: +51 999 999 999 | Redes: @bruno_escribe</p>
+  </footer>
+
+  <!-- Script para cambiar secciones -->
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+    function showPost(id) {
+      document.querySelectorAll("#escritos .post").forEach(p => p.style.display = "block");
+      document.querySelectorAll("#escritos .post").forEach(p => {
+        if (p.id && p.id !== id) p.style.display = "none";
+      });
+      document.getElementById(id).style.display = "block";
+    }
+    function showAlbum(id) {
+      document.querySelectorAll("#galeria .album").forEach(a => a.style.display = "block");
+      document.querySelectorAll("#galeria .album").forEach(a => {
+        if (a.id && a.id !== id) a.style.display = "none";
+      });
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
 </body>
 </html>
